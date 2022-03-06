@@ -1,0 +1,120 @@
+body{
+    background: beige
+}
+h1{
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: black;
+    text-align: center;
+}
+
+/*Empieza el css para las imagenes de los opciones*/ 
+.opciones{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.opciones input[type="checkbox"][id^="checkbox"]{
+    display: none;
+}
+
+.opciones label {
+    border: 1px solid beige;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label:before {
+    background-color: beige;
+    color: beige;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid beige;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+label img {
+    height: 400px;
+    width: 400px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+:checked + label {
+    border-color: pink;
+}
+  
+:checked + label:before {
+    align-items:flex-end;
+    content: "✓";
+    background-color: rgb(255, 133, 235);
+    transform: scale(1.5);
+}
+  
+:checked + label img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+/*CSS para el formulario*/
+.formulario{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 55px;
+    height: 500px;
+    width: 700px;
+    background: bisque;
+}
+
+input:not([type="submit"]){
+    width: 320px;
+    padding: 12px 20px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 92%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-color: rgb(151, 150, 150);
+    resize: none;
+  }
+
+  .boton{
+    display: flex; 
+    justify-content: center; 
+    padding-right: 55px;
+    padding-top: 30px;
+  }
+
+  input[type=button]{
+    background-color: rgb(226, 110, 201);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
