@@ -24,4 +24,14 @@
 
 .menu li a:hover {
     background-color: #111;
-  }
+}
+
+.footer {
+    position: sticky;
+    top: 100vh; 
+    width:100%;
+    margin: 0;
+    background-color: rgb(226, 110, 201);
+    color: white;
+    text-align: center;
+}
